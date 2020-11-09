@@ -1,0 +1,1402 @@
+@charset "utf-8";
+
+/*============================== 
+	- Template Name: LUV - Responsive One Page HTML Wedding Template
+	- Author: DoubleEight
+	- Version: 2.3
+	- Website: www.dethemes.com
+================================= */	
+
+/*---------------------- 
+	Stylesheet Guide
+------------------------
+00. PRELOADER
+01. GENERAL
+	01-1 Common
+	01-2 Title & Intro
+	01-3 Photo Divider
+	01-4 Button
+	01-5 Photo Item
+		01-5-1 Photo Item Caption
+02. HOME
+	02-1 Logo
+	02-2 Slider
+	02-3 Menu
+	02-4 Menu Color
+03. COUPLE
+	03-1 His/Her Profile
+	03-2 Popup Content
+04. THE DAY	
+	04-1 Location, Date, Accomodation
+	04-2 Location Map
+05. BRIDESMAID & GROOMSMEN
+06. GALLERY
+	06-1 Gallery2 - masonry col
+07. GIFT REGISTRY
+08. BLOG
+09. RSVP
+10. FOOTER
+11. MEDIA SCREEN
+12. STYLE SWITCHER
+
+
+/*========================*/
+/* 00. PRELOADER		  */
+/*========================*/
+#start_preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#000;
+    z-index:1000;
+}
+#preloader{
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-image:url(../images/preloader_background.jpg);
+}
+
+#qLpercentage{
+	display:none;
+}
+
+#coupletitle
+{
+	position:absolute;
+	top:50%;
+	left:0;
+	right:0;
+	height:120px;
+	margin-top:-60px;
+}
+
+#loader_heart{
+	font-size:38px;
+	line-height:70px;
+	color:#00c0b6;
+}
+
+#hisname{
+	font-family: 'Montserrat', sans-serif;
+	font-size:38px;
+	font-weight:bold;
+	color:#FFF;
+	line-height:28px;
+}
+
+#hername{
+	font-family: 'Montserrat', sans-serif;
+	font-size:38px;
+	font-weight:bold;
+	color:#00c0b6;
+	line-height:28px;
+}
+
+.animated_heart {	
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: flipYloop;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-direction: alternate;
+  
+  animation-duration: 1s;  
+  animation-name: flipYloop;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;  
+}
+
+
+@-webkit-keyframes flipYloop 
+{
+  from {
+	-webkit-transform:rotateY(0deg);
+  }
+
+  to {
+   	-webkit-transform:rotateY(180deg);
+  }
+}
+
+@keyframes flipYloop 
+{
+  from {
+	transform:rotateY(0deg);
+  }
+
+  to {
+   	transform:rotateY(180deg);
+  }
+}
+
+	
+/*========================*/
+/* 01. GENERAL 			  */
+/*========================*/
+
+/* 01-1 Common */
+/* ----------------------- */
+body {
+	font-family: 'PT Sans', sans-serif;	
+	color:#747474;
+}
+
+section {
+	background-color:#e8e8e8;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+	color:#444444;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	color:#444444;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+	color:#00c0b6;
+}
+
+h2{
+	font-size:54px; 
+}
+
+h3{
+	font-size:30px;
+}
+
+p{
+	font-size:16px;
+	line-height:24px;
+}
+
+p a{
+	font-weight:bold;
+	color:#00c0b6;
+}
+
+p a:hover{
+	color:#444444;
+}
+
+a, a:hover{
+	text-decoration:none;
+}
+
+a:focus{
+	outline:0;
+}
+
+.padding0{
+	padding:0;
+}
+
+.margin0{
+	margin:0;
+}
+
+.marginbottom50{
+	margin-bottom:50px;
+}
+
+/* 01-2 Title & Intro */
+/* ----------------------- */
+.the_title{
+	margin-top:140px;
+	margin-bottom:40px;
+}
+
+.sub_title{
+	font-family: 'Montserrat', sans-serif; 
+	font-size:28px; 
+	color:#8b8a8a; 
+	line-height:20px; 
+	letter-spacing:2px; 
+	display:block
+}
+
+.intro_heart{
+	position:absolute;
+	top:-15px; 
+	left:50%;
+	margin-left:-25px;
+	color:#00c0b6; 
+	font-size:35px;
+}
+
+.intro{
+	font-size:20px; 
+	padding:35px 85px; 
+	display:block;
+	border-bottom:1px solid #9e9d9d; 
+	border-top:1px solid #9e9d9d; 
+	margin-bottom:60px;
+}
+
+/* 01-3 Photo Divider */
+/* ----------------------- */
+.photo_divider{
+	height:375px;
+	width:100%;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	background-repeat:no-repeat;
+	margin-top:140px;
+}
+
+.photo_divider_ie11{
+	background-attachment:scroll !important;
+}
+
+#photo_divider1{
+	background-image:url(../images/photo_divider/photo_divider1.jpg);
+}
+
+#photo_divider2{
+	background-image:url(../images/photo_divider/photo_divider2.jpg);
+	background-position:top center;
+}
+
+#photo_divider3{
+	background-image:url(../images/photo_divider/photo_divider3.jpg);
+	background-position:top center;
+}
+
+#photo_divider4{
+	background-image:url(../images/photo_divider/photo_divider4.jpg);
+}
+
+#photo_divider5{
+	background-image:url(../images/photo_divider/photo_divider4.jpg);
+}
+
+#photo_divider6{
+	background-image:url(../images/photo_divider/photo_divider6.jpg);
+	background-position:bottom center;
+}
+
+#photo_divider7{
+	background-image:url(../images/photo_divider/photo_divider7.jpg);
+}
+
+#photo_divider8{
+	background-image:url(../images/photo_divider/photo_divider7.jpg);
+}
+
+#photo_divider9{
+	background-image:url(../images/photo_divider/photo_divider4.jpg);
+}
+
+/* 01-4 Button */
+/* ----------------------- */
+.btn-default{
+	background-color:#00c0b6 !important;
+	color:#fff !important;
+	border-radius: 0 !important;
+	border-color:#01b7ad !important;
+}
+
+.btn-secondary{
+	border-radius: 0 !important;
+}
+
+.btn-default:hover, .btn-secondary:hover{
+	background-color:#000000 !important;
+	border-color:#000000 !important;
+	color: #fff;
+}
+
+/* 01-5 Photo Item */
+/* ----------------------- */
+.photo_item {
+	position:relative;
+	overflow:hidden;
+}
+
+.photo_item_preview > a img {
+	display: block;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.5s; 
+		-ms-transition: -ms-transform 0.5s;
+		 -o-transition: -o-transform 0.5s;
+			transition: transform 0.5s;
+}
+
+.photo_item_overlay {
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	bottom: 0;
+	left: 0; 
+	background-color: rgba(0, 192, 182, 0.5);
+	opacity: 0; 
+	-webkit-transform: scale(0); 
+		-ms-transform: scale(0); 
+		 -o-transform: scale(0); 
+			transform: scale(0); 
+	-webkit-transition: -webkit-transform 0.5s; 
+		-ms-transition: -ms-transform 0.5s;
+		 -o-transition: -o-transform 0.5s;
+			transition: transform 0.5s;
+}
+
+.photo_item_overlay a {
+	position: absolute; 
+	top: 50%;
+	left:50%;
+	margin-top:-30px;
+	margin-left:-30px;
+}
+	
+.photo_item:hover .photo_item_overlay {
+	opacity: 1; 
+	-webkit-transform: scale(1); 
+		-ms-transform: scale(1);
+		 -o-transform: scale(1);  
+			transform: scale(1); 
+}
+.photo_item:hover .photo_item_preview > a img { 
+	-webkit-transform: scale(1.1); 
+		-ms-transform: scale(1.1);
+		 -o-transform: scale(1.1);  
+			transform: scale(1.1); 
+}
+
+.icon_background{
+	display:block; 
+	background: rgba(0, 0, 0, 0); 
+	height:60px; 
+	width:60px; 
+	padding:13px;
+	-webkit-border-radius :150px; 
+		-moz-border-radius:150px; 
+			border-radius :150px; 
+			
+	-webkit-transform: scale(0); 
+		-ms-transform: scale(0); 
+		 -o-transform: scale(0); 
+			transform: scale(0);	
+			
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.icon_button{
+	position:absolute;
+	padding:13px; 
+	font-size:30px; 
+	color:#fff; 
+}
+
+.photo_item_overlay a:hover .icon_background{
+	background: rgba(0, 0, 0, 0.7); 
+	-webkit-transform: scale(1.1); 
+		-ms-transform: scale(1.1);
+		 -o-transform: scale(1.1);  
+			transform: scale(1.1); 
+}
+
+
+/* 01-5-1 Photo Item Caption */
+/* ----------------------- */
+.photo_caption_wrapper{
+	position:absolute; 
+	bottom:0; 
+	display:block; 
+	width:100%; 
+	height:30%;
+}
+
+.photo_caption
+{
+	color:#ffffff; 
+	font-size:18px;
+	font-family: 'Montserrat', sans-serif;  
+	letter-spacing:3px; 
+	text-align:center; 
+	text-decoration:none; 
+	display:block;	
+}
+
+/* =================================================== */
+/* 02. HOME		 		                               */
+/* =================================================== */
+
+#home {
+	background-color:transparent !important;
+	padding:0 !important;
+}
+
+/* 02-1 Logo */
+/* ----------------------- */
+#logo {
+	font-family: 'Montserrat', sans-serif;
+	display:block;
+	background-color:#000000;
+	font-size:20px;
+	letter-spacing:2px;
+	color:#ffffff;
+	width:190px;
+	height:80px;
+	padding-top:25px;
+	text-align:center;
+	z-index:999;
+	border-radius: 0 0 13px 13px;
+}
+
+#logo_fecha
+{
+	font-size:10px;
+}
+
+#logo_link
+{
+	text-decoration:none;
+}
+
+#logo_link:focus{
+	outline:0;
+}
+
+/* 02-2 Slider */
+/* ----------------------- */
+#slide_content {
+	margin:310px 0 90px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#slide_text{
+	color:#ffffff;
+}
+
+#slide_text1{
+	font-size:48px;
+	line-height:45px;
+	font-weight:bold
+}
+
+#slide_text2{
+	font-size:38px;
+	line-height:35px;
+	letter-spacing:3px;
+}
+
+#slide_text3{
+	font-size:40px;
+	line-height:60px;
+	font-weight:bold;
+	border-bottom:solid 3px #ffffff;
+	border-top:solid 3px #ffffff
+}
+
+#slide_text4{
+	font-size:42px;
+	font-weight:bold
+}
+
+#slide_text4 span
+{
+	font-size:12px; 
+	padding:0 8px
+}
+
+.heart_row {
+	color:#00c0b6;
+	margin:0;
+}
+
+.heart_row span {
+	padding:0 3.7px;
+}
+
+/* 02-3 Menu */
+/* ----------------------- */
+#nav {
+	font-family: 'Montserrat', sans-serif;
+	font-size:12px;
+	text-transform:uppercase;
+	z-index:998;
+	width:100%;
+}
+
+#nav {
+	padding:0px 0;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.is-sticky #nav {
+	padding:15px 0;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.navbar {
+	border-radius:0;
+	margin-bottom:0;
+}
+
+.navbar-default{
+	border:none;
+}
+
+.navbar-default .navbar-nav > li > a:focus
+{
+	outline:0;
+}
+
+
+/* 02-4 Menu Color */
+/* ----------------------- */
+/* navbar */
+.navbar-default {
+    background-color: #00c0b6;
+    border-color: #E7E7E7;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav  {
+	background-color: #00c0b6;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #000	;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000;
+    background-color: #00c0b6;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #000;
+	border-color: #000;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+
+/*========================*/
+/* 03. COUPLE        	  */
+/*========================*/
+
+/* 03-1 His/Her Profile */
+/* ----------------------- */
+.profile{
+	background-color:#fff; 
+	padding:25px 20px
+}
+
+.subname {
+	font-family: 'Montserrat', sans-serif; 
+	font-size:22px; 
+	line-height:20px; 
+	color:#8b8a8a
+}
+
+.profile_text{
+	margin-top:10px;
+}
+
+/* 03-2 Popup Content */
+/* ----------------------- */
+.popup_content{
+	width:60%; 
+	margin:30px auto; 
+	background-color:#FFF; 
+	height:100%;
+	padding:30px
+}
+
+.popup_content img{
+	width:100%;
+	margin:20px 0 20px 0
+}
+
+/*========================*/
+/* 04. THE DAY		  	  */
+/*========================*/
+
+/* 04-1 Location, Date, Accomodation */
+/* ----------------------- */
+.box{
+	background-color:#ffffff;
+	margin-top:20px;
+}
+
+.box_icon{
+	background-color:#00c0b6; 
+	margin-top:-1px; 
+	padding:18px; 
+	height:60px; 
+	width:60px; 
+	color:#ffffff; 
+	font-size:26px
+}
+
+.box_title{
+	padding-left:20px; 
+	font-weight:bold; 
+	font-family: 'Montserrat', sans-serif; 
+	font-size:18px; 
+	color:#444444
+}
+
+.box_text{
+	padding:20px 25px;
+}
+
+/* 04-2 Location Map */
+/* ----------------------- */
+#location_map{
+	width:100%;
+	height:450px;
+	margin-top:30px;
+}
+
+/*===============================*/
+/* 05. BRIDESMAID & GROOMSMEN    */
+/*===============================*/
+
+.name_wrapper{
+	background-color:#FFF; 
+	padding:20px 0
+}
+
+.photo_col{
+	margin-bottom:30px;
+}
+
+/*========================*/
+/* 06. GALLERY			  */
+/*========================*/
+
+/* 06-1 Gallery2 - masonry col */
+/* ----------------------- */
+.masonry_col, .grid_sizer{
+	width:25%;
+}
+
+.masonry_col.w2{
+	width:50%;
+}
+
+.masonry_col.w3{
+	width:75%;
+}
+
+.masonry_col.w4{
+	width:100%;
+}
+
+
+/*========================*/
+/* 07. GIFT REGISTRY		  */
+/*========================*/
+#registry_logo .item{
+	text-align:center;	
+}
+
+#registry_logo .item img{
+	width:80%;
+	height:auto;
+}
+
+/*========================*/
+/* 08. BLOG				  */
+/*========================*/
+.blog_wrapper{
+	background-color:#fff; 
+	padding:25px 20px
+}
+
+.blog_text{
+	margin-top:10px;
+}
+
+.blog_info a{
+	color:#00c0b6;
+}
+
+.blog_info a:hover{
+	color:#444444;
+}
+
+.masonry_col_blog, .grid_sizer_blog{
+	width:32%;
+	margin-bottom:20px;	
+}
+
+.masonry_col_blog.w2{
+	width:65.7%;
+}
+
+.masonry_col_blog.w3{
+	width:100%;
+}
+
+#loading_more{
+	display:none;
+}
+
+/*========================*/
+/* 09. RSVP				  */
+/*========================*/
+
+input[type=text], input[type=email], select {
+   	height:45px !important;
+}
+
+input[type=text], input[type=email], select, textarea{
+	border-radius:0 !important;
+}
+
+option{
+	color:#747474;
+}
+
+#result{
+	margin-bottom:20px;
+}
+
+#result .bg-danger, #result .bg-success{
+	padding:10px;
+	color:#ffffff;
+}
+
+#result .bg-danger{
+	background-color:#C33
+}
+
+#result .bg-success{
+	background-color:#00c0b6
+}
+
+#submitButton{
+	margin-top:30px
+}
+
+/*========================*/
+/* 10. FOOTER			  */
+/*========================*/
+#footer_text{
+	background-color:#000; 
+	height:60px; 
+	margin-top:100px; 
+	padding:20px;
+	overflow: hidden;
+}
+
+
+/* =================================================== */
+/* 11. MEDIA SCREEN	 		                           */
+/* =================================================== */
+@media (max-width:1199px) {
+.animated_heart {	
+  -webkit-animation-name: none;
+}
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+/* Blog -----------------------------*/
+.masonry_col_blog, .grid_sizer_blog{
+	width:31.9%;
+}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.photo_divider {
+	background-attachment: scroll !important;
+}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+.photo_divider {
+	background-attachment: scroll !important;
+}
+}
+
+@media (max-width:991px){	
+/* 01-5 Photo Item 	       */
+/* ----------------------- */
+.photo_item_preview > a img {
+	display: block;
+	width: 100%;
+	-webkit-transition: none; 
+		-ms-transition: none; 
+		 -o-transition: none; 
+			transition: none; 
+}
+
+.photo_item_overlay {
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	bottom: 0;
+	left: 0; 
+	background-color: rgba(0, 192, 182, 0.5);
+	opacity: 0; 
+	-webkit-transform: none; 
+		-ms-transform: none; 
+		 -o-transform: none; 
+			transform: none;
+	-webkit-transition: none; 
+		-ms-transition: none;
+		 -o-transition: none;
+			transition: none;
+}
+	
+.photo_item:hover .photo_item_overlay {
+	opacity: 1; 
+	-webkit-transform: none;
+		-ms-transform: none;
+		 -o-transform: none;
+			transform: none;
+}
+
+.photo_item:hover .photo_item_preview > a img { 
+	-webkit-transform: none;
+		-ms-transform: none;
+		 -o-transform: none; 
+			transform: none;
+}
+
+.icon_background{
+	display:block; 
+	background: rgba(0, 0, 0, 0); 
+	height:60px; 
+	width:60px; 
+	padding:13px;
+	-webkit-border-radius :150px; 
+		-moz-border-radius:150px; 
+			border-radius :150px; 
+			
+	-webkit-transform: none;
+		-ms-transform: none;
+		 -o-transform: none;
+			transform: none;
+			
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+
+.photo_item_overlay a:hover .icon_background{
+	background: rgba(0, 0, 0, 0.7); 
+	-webkit-transform: none; 
+		-ms-transform: none;
+		 -o-transform: none; 
+			transform: none;
+}
+
+/* Slider-----------------------------*/
+#slide_content > .text-right{
+	text-align:center !important;
+}
+
+#slide_content >.pull-right{
+	float:none !important;
+}
+
+/* Menu-----------------------------*/
+.navbar-collapse{
+	margin-top:15px;
+}
+
+/* His Profile ---------------------*/
+#his_profile{
+	margin-bottom:40px;
+}
+
+/* Gallery2  ----------------------- */
+.masonry_col, .grid_sizer{
+	width:50% !important;
+}
+
+/* Blog 2 -----------------------------*/
+.masonry_col_blog, .grid_sizer_blog{
+	width:48.5%;
+}
+
+.masonry_col_blog.w2{
+	width:100%;
+}
+
+/* Popup Content ----------------------- */
+.popup_content{
+	width:70%;
+}
+}
+
+@media (min-width:768px) and (max-width:991px) {
+#slide_content {
+	margin: 100px 0;
+}
+
+/* Photo Divider ----------------------- */
+.photo_divider {
+	background-attachment: scroll !important;
+}
+}
+
+
+@media (max-width: 767px) {
+#slide_content {
+	margin: 80px 0;
+}
+
+/* Blog 2 -----------------------------*/
+.masonry_col_blog, .grid_sizer_blog{
+	width:48.15%;
+}
+
+/* Popup Content ----------------------- */
+.popup_content{
+	width:80%;
+}
+
+/* Photo Divider ----------------------- */
+.photo_divider {
+	background-attachment: scroll !important;
+}
+}
+
+@media (max-width:578px) {
+/* Slider-----------------------------*/	
+#slide_content {
+	margin: 30px 0 30px 0;
+}
+
+#slide_text1{
+	font-size:28px;
+	line-height:24px;
+}
+
+#slide_text2{
+	font-size:20px;
+	line-height:26px;
+}
+
+#slide_text3{
+	font-size:32px;
+	line-height:46px;
+}
+
+#slide_text4{
+	font-size:30px;
+	line-height:30px;
+}
+
+#slide_text4 span
+{
+	font-size:12px; 
+	padding:0 8px
+}
+
+.heart_row {
+	color:#00c0b6;
+	margin:0;
+}
+
+.heart_row span {
+	padding:0 1px;
+}
+}
+
+
+@media (max-width:570px) {
+/* Blog 2 -----------------------------*/
+.masonry_col_blog, .grid_sizer_blog{
+	width:100%;
+}
+}
+
+@media (max-width:480px) {
+/* Common --------------------------*/
+h2{
+	font-size:30px; 
+}
+
+h3{
+	font-size:24px; 
+}	
+
+/* Title & Intro --------------------*/
+.sub_title{
+	font-size:20px;
+}
+
+.intro{
+	padding:35px 5px;
+	font-size: 18px;
+}
+
+/* His/Her Profile ------------------*/
+.subname{
+	font-size:18px;
+}
+
+/* Logo ------------------------------*/	
+#logo {
+	width:80px;
+	height: 105px;
+	padding-top:15px;
+	font-size: 16px;
+}	
+
+/* Slider-----------------------------*/	
+#slide_content {
+	margin: 40px 0 40px 0;
+}	
+	
+/* Menu-----------------------------*/
+#nav {
+	padding: 0 0;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.is-sticky #nav {
+	padding: 5px 0;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;	
+}
+
+.navbar-collapse {
+	margin-top:5px;
+}
+
+/* His/Her Profile -----------------------*/
+#male_icon, #female_icon {
+	display:none;
+}
+}
+
+/* =================================================== */
+/* 12. STYLE SWITCHER	 		                       */
+/* =================================================== */
+#style_switcher{
+	background-color:#FFF;
+	position:fixed; 
+	top:30%; 
+	padding:5px; 
+	z-index:999; 
+	box-shadow: 2px 2px 3px #888888; 
+	left:-110px
+}
+
+#theme_options{
+	color:#444444;
+}
+
+.color_pallete{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	margin-right:3px
+}
+
+#reset > span{
+	background-color:#00c0b6;
+}
+
+#pink > span{
+	background-color:#d56363;
+}
+
+#purple > span{
+	background-color:#b06c8b;
+}
+
+#brown > span{
+	background-color:#ad8763;
+}
+
+#theme_options > span{
+	font-size:24px;
+	margin: 0 5px 0 10px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card
+{
+    width: 100%;
+    background-color: #fff;
+    color: #989898;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    border-radius: 4px;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    display: table;
+}
+
+.card + .card{margin-left: 2%}
+
+.date
+{
+	background: #FFF;
+    position: absolute;
+    float: left;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    border-right: 2px dashed #dadde6;
+    left: 0;
+    display: table-cell;
+}
+
+.date:before,
+.date:after
+{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: -15px ;
+  right: -15px;
+  z-index: 1;
+  border-radius: 50%
+}
+
+.date:after
+{
+  top: auto;
+  bottom: -15px
+}
+
+.date time
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.date time span{display: block}
+
+.date time span:first-child
+{
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 250%
+}
+
+.date time span:last-child
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px
+}
+
+.card-cont
+{
+	display: table-cell;
+    width: 75%;
+    font-size: 85%;
+    padding: 10px 10px 30px 50px;
+    position: relative;
+    float: right;
+    height: 182px;
+    height: auto;
+    display: inline-block;
+    display: table-cell;
+}
+
+.card-cont h3
+{
+  color: #3C3C3C;
+  font-size: 130%
+}
+
+.card-cont > div
+{
+  /* display: table-row */
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i,
+.card-cont .even-date time,
+.card-cont .even-info p
+{
+  display: table-cell
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i
+{
+  padding: 5% 5% 0 0
+}
+
+.card-cont .even-info p
+{
+  padding: 30px 50px 0 0
+}
+
+.card-cont .even-date time span
+{
+  display: block
+}
+
+.card-cont a
+{
+  /* display: block; */
+  /* text-decoration: none; */
+  /* /* width: 80px; */ */
+  /* /* height: 30px; */ */
+  /* background-color: #D8DDE0; */
+  /* color: #fff; */
+  /* text-align: center; */
+  /* line-height: 30px; */
+  /* border-radius: 2px; */
+  /* position: absolute; */
+  /* right: 10px; */
+  /* bottom: 10px */
+  
+  
+  display: block;
+    text-decoration: none;
+    /* width: 80px; */
+    /* height: 30px; */
+    background-color: #D8DDE0;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    position: absolute;
+    right: 10px;
+    /* bottom: 10px; */
+    /* bottom: 0;
+}
+
+
+
+@media screen and (max-width: 860px)
+{
+  .card
+  {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px
+  }
+  
+  .card + .card{margin-left: 0}
+  
+  .card-cont .even-date,
+  .card-cont .even-info
+  {
+    font-size: 75%
+  }
+}
